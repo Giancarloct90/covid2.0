@@ -9,7 +9,6 @@ const router = (route) => {
     console.log(route);
     switch (route) {
         case '':
-            window.location.hash('fuck');
             return rootBody.appendChild(pages.home());
         case '#/':
             return rootBody.appendChild(pages.home());
