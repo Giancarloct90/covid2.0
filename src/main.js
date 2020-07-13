@@ -6,6 +6,11 @@ import './main.css';
 import {
     router
 } from "./router/index";
+const {
+    Covid
+} = require('./model/homeModel');
+const data = new Covid();
+
 
 router(window.location.hash);
 window.addEventListener('hashchange', () => {

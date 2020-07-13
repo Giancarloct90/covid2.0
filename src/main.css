@@ -11,3 +11,47 @@ body {
     background: linear-gradient(to right, #3CD3AD, #4CB8C4);
 
 }
+
+.Title {
+    color: #F0B949;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 55px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputSize {
+    width: 100%;
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+#txt:focus {
+    outline: none !important;
+    border: 3px solid #F0B949;
+
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#divCardCountry {
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+#lblComfirmed {
+    color: black
+}
+
+#lblRecovered {
+    color: green;
+}
+
+#lblDeaths {
+    color: red;
+}
+
+.headCards {
+    background-color: #94E6F7;
+}
