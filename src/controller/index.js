@@ -1,7 +1,9 @@
-import Home from "./homeController";
+import {
+    home
+} from "./homeController";
 
 const pages = {
-    home: Home
+    home: home
 }
 
 export {

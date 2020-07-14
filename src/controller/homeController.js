@@ -2,21 +2,20 @@ import view from "../views/home.html";
 import {
     numberWithCommas
 } from "../utils/utils";
-const {
-    Covid
-} = require('../model/homeModel');
+
+const findcountry = () => {
+    console.log('yaya');
+}
 
 
-
-export default async () => {
-    const fetchData = new Covid;
-    const countries = await fetchData.getData();
+const home = async (countriesPure) => {
+    console.log(countriesPure);
     const div = document.createElement('div');
     div.innerHTML = view;
-    console.log(countries.data);
+
     let html = '';
     const divCardCountry = div.querySelector('#divCardCountry');
-    countries.data.map(country => {
+    countriesPure.data.map(country => {
         html = '';
         let divCards = document.createElement('div');
         divCards.classList.add('card', 'border-dark', 'mb-3');
@@ -35,5 +34,11 @@ export default async () => {
         divCards.innerHTML = html;
         divCardCountry.appendChild(divCards);
     });
+
+
     return div;
+}
+
+export {
+    home
 }
