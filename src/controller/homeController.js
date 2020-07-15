@@ -8,14 +8,19 @@ const findcountry = () => {
 }
 
 
-const home = async (countriesPure) => {
-    console.log(countriesPure);
+const home = async (countriesPure, flag) => {
+    if (flag) {
+        var countriesFinal = countriesPure;
+    } else {
+        var countriesFinal = countriesPure.data;
+    }
     const div = document.createElement('div');
     div.innerHTML = view;
 
     let html = '';
     const divCardCountry = div.querySelector('#divCardCountry');
-    countriesPure.data.map(country => {
+    console.log(countriesFinal);
+    countriesFinal.map(country => {
         html = '';
         let divCards = document.createElement('div');
         divCards.classList.add('card', 'border-dark', 'mb-3');
@@ -37,6 +42,10 @@ const home = async (countriesPure) => {
 
 
     return div;
+}
+
+const Render = () => {
+
 }
 
 export {

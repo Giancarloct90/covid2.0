@@ -14,9 +14,13 @@ const router = async (route) => {
     countriesPure = await fetchData();
     switch (route) {
         case '':
-            return rootBody.appendChild(await pages.home(countriesPure));
+            rootBody.appendChild(await pages.input());
+            rootBody.appendChild(await pages.home(countriesPure, false));
+            break;
         case '#/':
-            return rootBody.appendChild(await pages.home());
+            rootBody.appendChild(await pages.input());
+            rootBody.appendChild(await pages.home(countriesPure, false));
+            break;
         default:
             console.log('404!!');
     }
