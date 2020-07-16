@@ -6,20 +6,26 @@ import {
 } from "../model/homeModel";
 var countriesPure;
 
-const rootBody = document.getElementById('root');
+const divTitle = document.getElementById('divTitle');
+const divContent = document.getElementById('divContent');
+const divcbxChooseCountry = document.getElementById('divcbxChooseCountry');
+const divSearchBar = document.getElementById('divSearchBar');
+// const divTitle = document.getElementById('divTitle');
 
 const router = async (route) => {
-    rootBody.innerHTML = '';
+    divContent.innerHTML = '';
     console.log(route);
     countriesPure = await fetchData();
     switch (route) {
         case '':
-            rootBody.appendChild(await pages.input());
-            rootBody.appendChild(await pages.home(countriesPure, false));
+            divcbxChooseCountry.appendChild(await pages.cbxChooseCountry());
+            divTitle.appendChild(await pages.title());
+            divSearchBar.appendChild(await pages.input());
+            divContent.appendChild(await pages.home(countriesPure, false));
             break;
         case '#/':
-            rootBody.appendChild(await pages.input());
-            rootBody.appendChild(await pages.home(countriesPure, false));
+            divTitle.appendChild(await pages.input());
+            divContent.appendChild(await pages.home(countriesPure, false));
             break;
         default:
             console.log('404!!');

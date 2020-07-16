@@ -15,15 +15,9 @@ export default async () => {
     let countriesPure;
     countriesPure = await fetchData();
     txtFindCountry.addEventListener('keyup', async () => {
-        console.time('START');
-        // console.log(arrayNewCountries);
-        console.timeEnd('START');
-        // console.log(txtFindCountry.value);
-        const rootBody = document.getElementById('root');
-        rootBody.innerHTML = ''
-        rootBody.appendChild(await pages.input());
-        // console.log(await searchCountry(countriesPure, txtFindCountry));
-        rootBody.appendChild(await pages.home(await searchCountry(countriesPure, txtFindCountry), true));
+        const divContent = document.getElementById('divContent');
+        divContent.innerHTML = ''
+        divContent.appendChild(await pages.home(await searchCountry(countriesPure, txtFindCountry), true));
     })
     return div;
 }

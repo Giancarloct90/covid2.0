@@ -3,11 +3,6 @@ import {
     numberWithCommas
 } from "../utils/utils";
 
-const findcountry = () => {
-    console.log('yaya');
-}
-
-
 const home = async (countriesPure, flag) => {
     if (flag) {
         var countriesFinal = countriesPure;
@@ -19,7 +14,6 @@ const home = async (countriesPure, flag) => {
 
     let html = '';
     const divCardCountry = div.querySelector('#divCardCountry');
-    console.log(countriesFinal);
     countriesFinal.map(country => {
         html = '';
         let divCards = document.createElement('div');
@@ -39,13 +33,7 @@ const home = async (countriesPure, flag) => {
         divCards.innerHTML = html;
         divCardCountry.appendChild(divCards);
     });
-
-
     return div;
-}
-
-const Render = () => {
-
 }
 
 export {
