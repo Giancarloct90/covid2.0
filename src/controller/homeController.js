@@ -18,7 +18,6 @@ const home = async (countriesPure, flag) => {
         html = '';
         let divCards = document.createElement('div');
         divCards.classList.add('card', 'border-dark', 'mb-3');
-        divCards.style.maxWidth = '18rem';
         html += `<div class="card-header  border-dark headCards">${country.name}</div>`;
         html += `<div class="card-body text-dark">`;
         html += `<span id="lblComfirmed">Comfirmed: ${numberWithCommas(country.latest_data.confirmed)}</span><br>`
@@ -34,6 +33,12 @@ const home = async (countriesPure, flag) => {
         divCardCountry.appendChild(divCards);
     });
     return div;
+}
+
+const countrySelected = async (country) => {
+    let div = document.createElement('div');
+    div.innerHTML = div;
+
 }
 
 export {
