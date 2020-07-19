@@ -1,6 +1,7 @@
 import view from "../views/home.html";
 import {
-    numberWithCommas
+    numberWithCommas,
+    getFecha
 } from "../utils/utils";
 
 const home = async (countriesPure, flag) => {
@@ -28,7 +29,9 @@ const home = async (countriesPure, flag) => {
             html += `<span id="lblComfirmed">Death Rate: ${country.latest_data.calculated.death_rate.toFixed(2)} %</span>`
         }
         html += `</div>`;
-        html += `<div class="card-footer bg-transparent border-dark">Footer</div>`;
+        // getFecha(country.updated_at)
+
+        html += `<div class="card-footer bg-transparent border-dark">${getFecha(new Date(country.updated_at))}</div>`;
         divCards.innerHTML = html;
         divCardCountry.appendChild(divCards);
     });

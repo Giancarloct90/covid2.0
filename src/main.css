@@ -100,8 +100,63 @@ body {
     cursor: pointer;
 }
 
+.divTotales {
+    background-color: white;
+    border-radius: 15px;
+    height: 140px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 600px) {
     .modal-child {
         width: 80%;
     }
+}
+
+
+/* TITLE TOTAL COMFIRMED */
+.letraComfirmados {
+    color: black;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* NUMBER TOTAL CONFIRMED */
+.numeroComfirmado {
+    color: black;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* TITLE TOTAL RECIVED */
+.letraRecivered {
+    color: green;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* NUMBER TOTAL RECOVERED */
+.numeroRecivered {
+    color: green;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TITLE TOTAL DEATHS */
+.letraDeaths {
+    color: red;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NUMBER TOTAL DEATHS */
+.numeroDeaths {
+    color: red;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
 }
