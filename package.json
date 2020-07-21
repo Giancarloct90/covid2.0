@@ -16,10 +16,13 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "chart.js": "^2.9.3",
     "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-plugin": "^0.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "style-loader": "^1.2.1",

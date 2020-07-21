@@ -6,6 +6,9 @@ import cbxChooseCountry from "./cbxChooseCountry";
 import title from "./title";
 import worlWide from "./worlWideController";
 import countrySelected from "./countrySelectedController";
+import {
+    renderChart
+} from "./chartsController";
 
 const pages = {
     home: home,
@@ -13,7 +16,8 @@ const pages = {
     cbxChooseCountry: cbxChooseCountry,
     title: title,
     worlWide: worlWide,
-    countrySelected: countrySelected
+    countrySelected: countrySelected,
+    renderChart: renderChart
 }
 
 export {
